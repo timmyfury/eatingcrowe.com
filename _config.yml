@@ -7,7 +7,7 @@ description: Cooking great food with great ingredients and an abundance of malar
 
 logo: /images/logo.jpg
 
-asset_url: http://media.eatingcrowe.com.s3.amazonaws.com
+asset_url: http://media.eatingcrowe.com
 
 episodes:
     - episode-1-duck-confit-salad
