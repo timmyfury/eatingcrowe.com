@@ -1,16 +1,29 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <title>{% if page.title %}{{ page.title }} on {% endif %}{{ site.title }}</title>
-        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-        <meta name="generator" content="Jekyll" />
-        <meta name="author" content="{{ site.author }}" />
-        <meta name="description" content="{{ site.description }}" />
-        <link rel="stylesheet" href="{% if page.episode %}..{% else %}.{% endif %}/styles/reset.css" type="text/css" />
-        <link rel="stylesheet" href="{% if page.episode %}..{% else %}.{% endif %}/styles/screen.css" type="text/css" />
-
+	<head>
+		<title>{% if page.title %}{{ page.title }} on {% endif %}{{ site.title }}</title>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<meta name="generator" content="Jekyll" />
+		<meta name="author" content="{{ site.author }}" />
+		<meta name="description" content="{{ site.description }}" />
+		<meta name="keywords" content="{% if page.tags %}{{ page.tags }}{% else %}cooking, food, cooking food{% endif %}" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" />
-    </head>
+
+		<!--
+		<link rel="shortcut icon" href="/favicon.ico" />
+		<link rel="apple-touch-icon" href="apple-touch-icon.png" />
+		<link rel="apple-touch-icon" sizes="57x57" href="/apple-touch-icon-57x57.png" />
+		<link rel="apple-touch-icon" sizes="72x72" href="/apple-touch-icon-72x72.png" />
+		<link rel="apple-touch-icon" sizes="114x114" href="/apple-touch-icon-114x114.png" />
+		-->
+
+        <link rel="stylesheet" href="{% if page.episode %}..{% else %}.{% endif %}/styles/normalize.css" type="text/css" />
+        <link rel="stylesheet" href="{% if page.episode %}..{% else %}.{% endif %}/styles/screen.css" type="text/css" />
+		<link rel="stylesheet" href="{% if page.episode %}..{% else %}.{% endif %}/video-js/video-js.css" type="text/css" />
+
+		<script src="{% if page.episode %}..{% else %}.{% endif %}/scripts/jquery-1.7.1.min.js"></script>
+		<script src="{% if page.episode %}..{% else %}.{% endif %}/video-js/video.js"></script>
+	</head>
     <body>
         <div class="content">
             {{ content }}

@@ -12,4 +12,70 @@ layout: default
 <div class="episode-content">
 	<h1>{{ page.title }}</h1>
 	<p>{{ page.description }}</p>
+
+	<p class="play-mobile"><a id="{{ page.episode }}" href="{{ site.asset_url }}/{{ page.episode }}/video.mp4">Watch this episode.</a></p>
+
+	<div class="video">
+		<video id="{{ page.episode }}-video" class="video-js vjs-default-skin" controls preload="auto" width="720" height="480" poster="{{ site.asset_url }}/{{ page.episode }}/thumb.jpg" data-setup="{}">
+			<source src="{{ site.asset_url }}/{{ page.episode }}/video.mp4" type="video/mp4">
+			<source src="{{ site.asset_url }}/{{ page.episode }}/video.ogg" type="video/ogg">
+			<source src="{{ site.asset_url }}/{{ page.episode }}/video.flv" type="video/x-flv">
+		</video>
+	</div>
+
+	{% if page.recipe %}
+	<div class="recipe">
+		<h2>Recipe</h2>
+
+		{% if page.recipe.notes %}
+		<div class="notes">
+			<p>{{ page.recipe.notes }}</p>
+		</div>
+		{% endif %}
+
+		{% if page.recipe.hardware %}
+		<div class="hardware">
+			<h3>Hardware</h3>
+			<ul>
+				{% for hardware in page.recipe.hardware %}
+				<li>{{ hardware }}</li>
+				{% endfor %}
+			</ul>
+		</div>
+		{% endif %}
+
+		{% if page.recipe.software %}
+		<div class="software">
+			<h3>Software</h3>
+			<ul>
+				{% for software in page.recipe.software %}
+				<li>{{ software }}</li>
+				{% endfor %}
+			</ul>
+		</div>
+		{% endif %}
+
+		{% if page.recipe.procedure %}
+		<div class="procedure">
+			<h3>Procedure</h3>
+			<ol>
+				{% for procedure in page.recipe.procedure %}
+				<li>{{ procedure }}</li>
+				{% endfor %}
+			</ol>
+		</div>
+		{% endif %}
+	</div>
+	{% endif %}
+	
+	{% if page.photos %}
+	<div class="photos">
+		<h2>Photos</h2>
+		<ul>
+			{% for photo in page.photos %}
+			<li><a href="{{ site.asset_url }}/{{ page.episode }}/i/{{ photo }}"><img src="{{ site.asset_url }}/{{ page.episode }}/i/{{ photo }}" /></a></li>
+			{% endfor %}
+		</ul>
+	</div>
+	{% endif %}
 </div>
