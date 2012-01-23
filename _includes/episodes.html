@@ -1,0 +1,15 @@
+{% include logo.html %}
+
+{% for page in site.pages %}
+    {% if page.is_episode_landing %}
+
+<div id="{{ page.episode }}" class="episode">
+    <h2><a href="/{{ page.episode }}/">{{ page.title }}</a></h2>
+    <a href="/{{ page.episode }}/"><img src="{{ site.asset_url }}/{{ page.episode }}/thumb.jpg" /></a>
+    <ul>
+        <li><a href="/{{ page.episode }}/">Watch This Episode</a></li>
+    </ul>
+</div>
+
+    {% endif %}
+{% endfor %}

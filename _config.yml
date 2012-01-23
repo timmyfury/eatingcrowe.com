@@ -1,0 +1,20 @@
+---
+permalink: /news/:title/
+
+title: Eating Crowe
+author: Tim Crowe
+description: Cooking great food with great ingredients and an abundance of malarkey.
+
+logo: /images/logo.jpg
+
+asset_url: http://media.eatingcrowe.com.s3.amazonaws.com
+
+episodes:
+    - episode-1-duck-confit-salad
+    - episode-2-chianti-braised-shortribs
+    - episode-3-chorizo-empenadas
+    - episode-4-two-kinds-of-fries
+    - episode-5-lobster-ravioli
+    - episode-6-cherry-coke-pulled-pork-sandwich
+    - episode-7-beef-hot-dogs
+    - episode-8-open-chefame-clam-bake
