@@ -17,27 +17,33 @@
 		<link rel="apple-touch-icon" sizes="114x114" href="/apple-touch-icon-114x114.png" />
 		-->
 
-        <link rel="stylesheet" href="{% if page.episode %}..{% else %}.{% endif %}/styles/normalize.css" type="text/css" />
-        <link rel="stylesheet" href="{% if page.episode %}..{% else %}.{% endif %}/styles/screen.css" type="text/css" />
-		<link rel="stylesheet" href="{% if page.episode %}..{% else %}.{% endif %}/video-js/video-js.css" type="text/css" />
+        <link rel="stylesheet" href="/styles/normalize.css" type="text/css" />
+        <link rel="stylesheet" href="/styles/screen.css" type="text/css" />
+		<link rel="stylesheet" href="/video-js/video-js.css" type="text/css" />
 
-		<script src="{% if page.episode %}..{% else %}.{% endif %}/scripts/jquery-1.7.1.min.js"></script>
-		<script src="{% if page.episode %}..{% else %}.{% endif %}/video-js/video.js"></script>
+		<script src="/scripts/jquery-1.7.1.min.js"></script>
+		<script src="/video-js/video.js"></script>
 	</head>
-    <body>
-        <div class="content">
-            {{ content }}
-        </div>
+	<body>
+		<div class="header">
+			<h1><a href="/">Eating Crowe</a></h1>
+		</div>
 
-        <script type="text/javascript">
-    		var _gaq = _gaq || [];
-    		_gaq.push(['_setAccount', 'UA-8912463-1']);
-    		_gaq.push(['_trackPageview']);
-    		(function() {
-    			var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-    			ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-    			var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-    		})();
-    	</script>
-    </body>
+		<!-- <div class="content"> -->
+			{{ content }}
+		<!-- </div> -->
+
+		<div class="footer"></div>
+
+		<script type="text/javascript">
+			var _gaq = _gaq || [];
+			_gaq.push(['_setAccount', 'UA-8912463-1']);
+			_gaq.push(['_trackPageview']);
+			(function() {
+				var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+				ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+				var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+			})();
+		</script>
+	</body>
 </html>
