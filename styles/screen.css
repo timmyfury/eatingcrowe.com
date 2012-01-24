@@ -11,60 +11,35 @@ body {
 .content,
 .footer {
 	margin: 0 auto;
-	padding: 20px 0;
-	width: 720px;
+/*	padding: 20px 0;*/
 }
 
-/*
-@media screen and (max-width: 480px) {
-
-}
-*/
-
-h1 {
-	font-size: 60px;
+h1,
+h2,
+h3 {
+	border-bottom: 1px solid #DDD;
 	font-weight: normal;
-	line-height: 62px;
-	margin: 20px 0 0 0;
+	margin: 30px 0 10px;
+	padding: 0 0 10px 0;
 	text-align: center;
 }
+h1 { font-size: 30px; line-height: 32px; }
+h2 { font-size: 24px; line-height: 26px; }
+h3 { font-size: 18px; line-height: 20px; }
 
 h1 a {
 	display: block;
 }
-
-a {
-	color: #000;
-	text-decoration: none;
-}
-
+a,
 a:hover,
 a:focus {
 	color: #000;
 	text-decoration: none;
 }
-
 a.image,
 a.image img {
 	border: 0;
 	display: block;
-}
-
-@media screen and (max-width: 320px) {
-	body {}
-
-	.header,
-	.content,
-	.footer {
-		margin: 0 10px;
-		padding: 20px 0;
-		width: 300px;
-	}
-
-	h1 {
-		font-size: 30px;
-		line-height: 32px;
-	}
 }
 
 /*
@@ -72,17 +47,17 @@ a.image img {
 **********************************************************************/
 .header {
 	border-bottom: 1px solid #DDD;
-	text-align: center;
+	margin: 20px auto;
+	padding: 0 0 20px;
 }
-
 .header h1,
 .header h1 a {
+	border-bottom: 0 none transparent;
 	display: block;
 	height: 385px;
 	margin: 0;
 	padding: 0;
 }
-
 .header h1 a {
 	background: url('./logo.png') center center no-repeat;
 	text-indent: -10000px;
@@ -92,37 +67,17 @@ a.image img {
 	Content
 **********************************************************************/
 .content {
-	border-bottom: 1px solid #DDD;
+/*	border-bottom: 1px solid #DDD;*/
 	text-align: left;
 }
-
-.content img {
-	width: 720px;
+.episode-list h1 {
+	padding: 0 0 20px 0;
 }
-
-.photos ul {
+.photos ul,
+.photos ul li {
 	list-style: none;
 	margin: 0;
 	padding: 0;
-}
-
-.photos ul li {
-	margin: 0;
-	padding: 0;
-}
-
-@media screen and (max-width: 320px) {
-	body {}
-
-	.content img {
-		width: 300px;
-	}
-	
-	.video-js,
-	.video-js .vjs-poster {
-		height: 198px !important;
-		width: 300px !important;
-	}
 }
 
 /*
@@ -131,12 +86,94 @@ a.image img {
 .footer {}
 
 /*
-	Clear fixes
+	Widths
 **********************************************************************/
-.clearfix:after {
-    content: ".";
-    display: block;
-    height: 0;
-    clear: both;
-    visibility: hidden;
+.header,
+.content,
+.content img,
+.footer {
+	width: 720px;
+}
+.video-js,
+.video-js .vjs-poster {
+	height: 480px !important;
+	width: 720px !important;
+}
+@media screen and (max-device-width: 600px) {
+	.header,
+	.content,
+	.content img,
+	.footer {
+		width: 580px;
+	}
+	.video-js,
+	.video-js .vjs-poster {
+		height: 387px !important;
+		width: 580px !important;
+	}
+}
+@media screen and (max-width: 480px) {
+	.header,
+	.content,
+	.content img,
+	.footer {
+		width: 460px;
+	}
+	.video-js,
+	.video-js .vjs-poster {
+		height: 307px !important;
+		width: 460px !important;
+	}
+}
+@media screen and (max-device-width: 400px) {
+	.header,
+	.content,
+	.content img,
+	.footer {
+		width: 380px;
+	}
+	.video-js,
+	.video-js .vjs-poster {
+		height: 253px !important;
+		width: 380px !important;
+	}
+}
+@media screen and (max-width: 320px) {
+	.header,
+	.content,
+	.content img,
+	.footer {
+		width: 300px;
+	}
+	.video-js,
+	.video-js .vjs-poster {
+		height: 200px !important;
+		width: 300px !important;
+	}
+}
+@media screen and (max-device-width: 240px) {
+	.header,
+	.content,
+	.content img,
+	.footer {
+		width: 220px;
+	}
+	.video-js,
+	.video-js .vjs-poster {
+		height: 147px !important;
+		width: 220px !important;
+	}
+}
+@media screen and (max-device-width: 190px) {
+	.header,
+	.content,
+	.content img,
+	.footer {
+		width: 170px;
+	}
+	.video-js,
+	.video-js .vjs-poster {
+		height: 113px !important;
+		width: 170px !important;
+	}
 }

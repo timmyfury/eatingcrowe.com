@@ -1,10 +1,12 @@
-{% for page in site.pages %}
-    {% if page.is_episode_landing %}
+<div class="episode-list">
+	{% for page in site.pages %}
+	    {% if page.is_episode_landing %}
 
-<div id="{{ page.episode }}" class="content">
-    <a class="image" href="/{{ page.episode }}/"><img src="{{ site.asset_url }}/{{ page.episode }}/thumb.jpg" /></a>
-	<h1><a href="/{{ page.episode }}/">{{ page.title }}</a></h1>
+	<div id="{{ page.episode }}" class="content episode">
+	    <a class="image" href="/{{ page.episode }}/"><img src="{{ site.asset_url }}/{{ page.episode }}/thumb.jpg" /></a>
+		<h1><a href="/{{ page.episode }}/">{{ page.title }}</a></h1>
+	</div>
+
+	    {% endif %}
+	{% endfor %}
 </div>
-
-    {% endif %}
-{% endfor %}
