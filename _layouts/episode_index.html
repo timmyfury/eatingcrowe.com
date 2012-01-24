@@ -16,49 +16,51 @@ layout: default
 	<p>{{ page.description }}</p>
 </div>
 
-{% if page.recipe %}
-<div class="content recipe">
-	<h2>Recipe</h2>
+{% if page.recipes %}
+	{% for recipe in page.recipes %}
+		<div class="content recipe">
+			<h2>{{ recipe.title }}</h2>
 
-	{% if page.recipe.notes %}
-	<div class="notes">
-		<p>{{ page.recipe.notes }}</p>
-	</div>
-	{% endif %}
+			{% if recipe.notes %}
+			<div class="notes">
+				<p>{{ recipe.notes }}</p>
+			</div>
+			{% endif %}
 
-	{% if page.recipe.hardware %}
-	<div class="hardware">
-		<h3>Hardware</h3>
-		<ul>
-			{% for hardware in page.recipe.hardware %}
-			<li>{{ hardware }}</li>
-			{% endfor %}
-		</ul>
-	</div>
-	{% endif %}
+			{% if recipe.hardware %}
+			<div class="hardware">
+				<h3>Hardware</h3>
+				<ul>
+					{% for hardware in recipe.hardware %}
+					<li>{{ hardware }}</li>
+					{% endfor %}
+				</ul>
+			</div>
+			{% endif %}
 
-	{% if page.recipe.software %}
-	<div class="software">
-		<h3>Software</h3>
-		<ul>
-			{% for software in page.recipe.software %}
-			<li>{{ software }}</li>
-			{% endfor %}
-		</ul>
-	</div>
-	{% endif %}
+			{% if recipe.software %}
+			<div class="software">
+				<h3>Software</h3>
+				<ul>
+					{% for software in recipe.software %}
+					<li>{{ software }}</li>
+					{% endfor %}
+				</ul>
+			</div>
+			{% endif %}
 
-	{% if page.recipe.procedure %}
-	<div class="procedure">
-		<h3>Procedure</h3>
-		<ol>
-			{% for procedure in page.recipe.procedure %}
-			<li>{{ procedure }}</li>
-			{% endfor %}
-		</ol>
-	</div>
-	{% endif %}
-</div>
+			{% if recipe.procedure %}
+			<div class="procedure">
+				<h3>Procedure</h3>
+				<ol>
+					{% for procedure in recipe.procedure %}
+					<li>{{ procedure }}</li>
+					{% endfor %}
+				</ol>
+			</div>
+			{% endif %}
+		</div>
+	{% endfor %}
 {% endif %}
 
 {% if page.photos %}
